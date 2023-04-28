@@ -1,0 +1,412 @@
+body{
+    margin: 0;
+}
+#description,#objectives p{
+    font-size: 25px;
+}
+h2{
+    font-size: 40px;
+    color: blue;
+}
+Header{
+    position: fixed;
+    width: 100%; 
+    top:0px;
+    height: 70px;
+    display: block;
+    justify-content: center;
+    background-color: #1F77BC;
+    z-index: 1;
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+.Desktop {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: auto 1px;
+}
+Header nav a {
+    margin: auto;
+    padding: 5px 25px;
+    color: white;
+    font-size: 20px;
+    transition: 0.5s;
+    text-decoration: none;
+}
+.Phone{    
+    display: none;
+}
+.Phone .Logo { 
+    margin-left: 40px;
+}
+.Phone .menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.menu {
+    display: grid;
+    grid-template-columns: repeat(1,100%);
+    grid-template-rows: repeat(4,25%);
+    width: 200px;
+    height: 0;
+    overflow: hidden;
+    background-color: rgba(6, 179, 231, 0.562);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    margin: 0px 40px;
+    transition: height .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+Header nav a:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 195, 255);
+    border-radius: 15px;
+}
+.menu.open{
+    height: 300px ;
+}
+
+.MenuMenu {
+    display: flex;
+    justify-content: right;
+    align-items: top;  
+    height: 900px;
+}  
+
+.MenuMenu.open { 
+    height: 0;
+} 
+.warpper{
+width: 80%;
+border-radius: 20px;
+display: block;
+margin: auto auto;
+padding: 20px;
+align-items: center ;
+}
+#description{
+    display: grid;
+    grid-template-rows: repeat(2,50%);
+    grid-template-columns: repeat(2,50%);
+    width: 80%;
+    margin: auto auto;
+}
+#description img{
+    height: 250px;
+    margin: auto auto;
+}
+.Logo{
+    width: 35px;
+    height: 100%;
+    margin: 5px 10px;
+    overflow: hidden;
+}
+.Logo2{
+    width: 100%;
+    height: 100%;
+    margin: 10px 10px; 
+    cursor: pointer;
+    color: #fff;
+    font-size: 30px;
+}
+
+.fa-sort-desc {
+    display: hidden;
+}
+.LogoMenu{
+    margin-right: 10px;
+}
+.Logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.Vide{
+    margin: 150px;
+}
+
+.Card {
+    margin: 20px auto;
+    height: 300px;
+    width: 180px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative; 
+}
+.Card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wrapCard {
+    margin: 20px auto;
+}
+.wrapCard p {
+    margin-top: 20px;
+    text-align: center;
+}
+.CardRott {
+    border-radius: 18px;
+    height: 300px;
+    max-width: 180px;
+    position: relative; 
+}
+.CardRott{
+text-align: center;
+transition: 0.5s;
+transform-style: preserve-3d;
+}
+.wrapCard:hover .CardRott{
+    transform: rotateY(180deg);
+}
+
+.front,
+.back{
+    width: 180px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    backface-visibility: hidden;
+}
+.front{
+    cursor: pointer;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.front img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.back{
+    transform: rotateY(180deg);
+    position: absolute;
+    height: 300px;
+    background-color: #fff;
+    border-radius:18px;
+}
+.descCard {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: +100%;
+    position: absolute;
+    background-color: rgba(47, 0, 255, 0.514);
+    backdrop-filter: blur(5px);
+    transition: 1s;
+    border-radius: 5px;
+}
+.descCard h3 { 
+    text-align: center;
+    color:white;
+}
+
+.descCard p { 
+    margin: 5px 5px;
+    color: white;
+}
+.Card:hover  .descCard {
+    right: 0;
+}
+.CardActivite:hover  .descCard {
+    right: 0;
+}
+.CardActivite{
+    margin: 30px 30px;
+    height: 300px;
+    width: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.CardActivite img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.EquipeA{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows:repeat(2,50%) ;
+}
+
+footer{
+    background: #111;
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    color: #fff;
+}    
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    margin: 40px 30px;
+    text-transform: capitalize;
+    line-height: 5px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+.socials li{
+    margin: 0 20px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 7px;
+    border-radius: 50%;
+}
+.socials a i{
+    font-size: 1.1rem;
+    width: 20px;
+    transition: color .4s ease;
+}
+
+footer ul{
+    padding-left: 0;
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom p{
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+ }
+ .down {
+    height: auto;
+    padding-top: 15px;
+  }
+  .down p {
+    font-size: 1.5vw;
+  }
+  .down h2 {
+    font-size: 2.5vw;
+  }
+ .footer-bottom p a{
+   color:#44bae8;
+   font-size: 16px;
+   text-decoration: none;
+ }
+ .footer-bottom span{
+     text-transform: uppercase;
+     opacity: .4;
+     font-weight: 200;
+ }
+
+.Equipe{
+    display: grid;
+    align-items: center;
+    grid-template-rows: repeat(2,50%);
+    grid-template-columns: repeat(4,25%);
+}
+
+.mySlides {display:none; width: 100%;}
+.SlideContenaire img {
+    width: 100%; 
+    border-radius: 30px;
+    overflow: hidden;
+    height: 500px;
+    object-fit: cover;
+}
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+@media  screen and (max-width:1350px) {
+    .CardActivite{
+        height: 290px;
+        width: 480px;
+    }
+}
+
+@media  screen and (max-width:1300px) {
+    
+    .Equipe{
+        grid-template-rows: repeat(4,33%);
+        grid-template-columns: repeat(3,33%);
+    }
+    .EquipeA{
+        grid-template-rows: repeat(3,33%);
+        grid-template-columns: repeat(1,100%);
+    }
+    #description{
+        grid-template-rows: repeat(4,25%);
+        grid-template-columns: repeat(1,100%);
+        margin-bottom:150px ;
+    }
+    #description,#objectives p{
+        font-size: 20px;
+    }
+    #description img{
+        margin: 20px auto;
+    }
+    .CardActivite{
+        margin: 20px auto;
+    }
+}
+
+
+@media  screen and (max-width:800px) {
+    .Equipe{
+        grid-template-rows: repeat(4,25%);
+        grid-template-columns: repeat(2,50%);
+    }
+
+        .Phone {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .Desktop {
+            display: none;
+        }
+}
+
+@media  screen and (max-width:650px) {
+    .CardActivite{
+        height: 250px;
+        width: 400px; 
+    }
+}
+
+@media  screen and (max-width:500px) {
+    .Equipe{
+        grid-template-rows: repeat(8,12.5%);
+        grid-template-columns: repeat(1,100%);
+    }
+    .CardRott{
+        margin: 10px;
+    }
+    .CardActivite{
+        margin: 20px 15px ;
+    }
+    .warpper{
+        margin: 0px;
+    }
+
+}
