@@ -1,5 +1,10 @@
-body{
-    margin: 0;
+*{
+        margin: 0;
+        padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: inherit;
+font-weight: 0;
 }
 #description,#objectives p{
     font-size: 25px;
@@ -13,7 +18,7 @@ Header{
     width: 100%; 
     top:0px;
     height: 70px;
-    display: block;
+    display: flex;
     justify-content: center;
     background-color: #1F77BC;
     z-index: 1;
@@ -162,7 +167,6 @@ transform-style: preserve-3d;
 .wrapCard:hover .CardRott{
     transform: rotateY(180deg);
 }
-
 .front,
 .back{
     width: 180px;
@@ -399,14 +403,33 @@ footer ul{
         grid-template-rows: repeat(8,12.5%);
         grid-template-columns: repeat(1,100%);
     }
+    Header, #activites{
+        max-width: 420px;
+        width: 100%;
+    }
     .CardRott{
         margin: 10px;
     }
     .CardActivite{
         margin: 20px 15px ;
+        height: 200px;
+        width: 300px; 
+    }
+    #description img { 
+        max-width: 250px;
+        height: 250px;
     }
     .warpper{
         margin: 0px;
+        width: 100%;
     }
 
+}
+
+@media screen and (max-width:400px){
+    Header, #activites{
+        max-width: 390px;
+        width: 100%;
+    }
+    
 }
